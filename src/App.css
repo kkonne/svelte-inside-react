@@ -1,0 +1,15 @@
+body {
+  @apply bg-gray-900 text-gray-50 m-0 box-border;
+}
+
+.container {
+  @apply my-0 mx-auto max-w-7xl;
+}
+
+.btn {
+  @apply py-2 px-4 outline-none rounded;
+}
+
+.btn--default {
+  @apply bg-gray-400 text-gray-700;
+}

@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState } from "react";
-import Hello from "./components/Hello.svelte";
+import Header from "./components/Header.svelte";
 import "./App.css";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     while (svelteRef.current?.firstChild)
       svelteRef.current?.firstChild.remove();
 
-    new Hello({
+    new Header({
       target: svelteRef.current,
     });
   }, []);
@@ -20,9 +20,14 @@ function App() {
     <>
       <div ref={svelteRef}></div>
 
-      <button onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </button>
+      <div className="container my-5">
+        <button
+          onClick={() => setCount((count) => count + 1)}
+          className="btn btn--default"
+        >
+          count is {count}
+        </button>
+      </div>
     </>
   );
 }
