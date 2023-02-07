@@ -14,6 +14,8 @@ function App() {
 
       <div className="container my-5">
         <button
+          type="button"
+          tabIndex={0}
           onClick={() => setCount((count) => count + 1)}
           className="btn btn--default"
         >

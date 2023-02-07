@@ -7,21 +7,31 @@
 <header class="navbar">
   <div class="brand-icon">{brandLogo}</div>
   <div class="brand-name">{brandName}</div>
-  <div on:click={handleLoginClick} class="login">Log in</div>
+  <button
+    type="button"
+    tabindex="0"
+    on:click={handleLoginClick}
+    class="btn login">Log in</button
+  >
 </header>
 
 <style scoped>
   .navbar {
     @apply w-full px-4 py-2 uppercase 
     bg-gray-200 text-gray-800
-    flex justify-between;
+    flex justify-between items-center;
   }
 
   .brand-name {
     @apply font-bold tracking-wider;
   }
 
-  .login {
-    @apply cursor-pointer;
+  button.login {
+    @apply uppercase cursor-pointer outline-none py-1 px-2;
+  }
+
+  button.login:hover,
+  button.login:focus {
+    @apply bg-gray-500 bg-opacity-50;
   }
 </style>

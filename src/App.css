@@ -6,10 +6,15 @@ body {
   @apply my-0 mx-auto max-w-7xl;
 }
 
-.btn {
+button.btn {
   @apply py-2 px-4 outline-none rounded;
 }
 
-.btn--default {
+button.btn--default {
   @apply bg-gray-400 text-gray-700;
+}
+
+button.btn--default:hover,
+button.btn--default:focus {
+  @apply bg-gray-300 text-gray-800;
 }
