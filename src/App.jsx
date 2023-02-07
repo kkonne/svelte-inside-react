@@ -13,6 +13,11 @@ function App() {
 
     new Header({
       target: svelteRef.current,
+      props: {
+        brandName: "Dev Pub",
+        brandLogo: "🍻🍻🍻",
+        handleLoginClick: () => alert("Got click from Svelte header!")
+      }
     });
   }, []);
 
