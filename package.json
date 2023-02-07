@@ -11,7 +11,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "svelte": "^3.55.1"
+    "svelte": "^3.55.1",
+    "zustand": "^4.3.2"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.0.2",
