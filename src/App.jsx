@@ -1,29 +1,16 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Header from "./components/Header.svelte";
+import { SvelteWrapper } from "./helpers/SvelteWrap";
 import "./App.css";
+
+const HeaderComponent = SvelteWrapper(Header);
 
 function App() {
   const [count, setCount] = useState(0);
 
-  const svelteRef = useRef();
-
-  useLayoutEffect(() => {
-    while (svelteRef.current?.firstChild)
-      svelteRef.current?.firstChild.remove();
-
-    new Header({
-      target: svelteRef.current,
-      props: {
-        brandName: "Dev Pub",
-        brandLogo: "🍻🍻🍻",
-        handleLoginClick: () => alert("Got click from Svelte header!")
-      }
-    });
-  }, []);
-
   return (
     <>
-      <div ref={svelteRef}></div>
+      <HeaderComponent brandName="Dev Pub" brandLogo="🍻🍻🍻" />
 
       <div className="container my-5">
         <button
